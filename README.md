@@ -1,2 +1,2 @@
 
-Csound instruments: Bass drums, snare drums, tom toms, claves, cymbals, cowbells. 
+Csound instruments: Bass drum, snare drum, tom tom, claves, cymbal, cowbell. 
