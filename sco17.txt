@@ -1,0 +1,19 @@
+ ;cowbell fm
+f 1 0 4096 10 1 
+
+; p1 = instrument [16]
+; p2 = start (s)
+; p3 = amplitude decay (s) [0.4 - 0.6]
+; p4 = amplitude level [0 - 20000]
+; p5 = frequency (Hz) [555]
+; p6 = c [1]
+; p7 = m [1.5]
+; p8 = index [4]
+
+
+;              amplitude --
+; inst  start  decay  level  frequency  c  m  index  
+i  17    0      0.6    20000  555       1  1.5  4
+
+e
+

@@ -1,0 +1,17 @@
+  sr = 44100
+  kr = 4410
+  ksmps = 10
+  nchnls = 1
+
+; tom tom
+         instr 13                      ; p3 = amplitude decay
+k1       linen     p4, 0, p3, p3       ; p4 = amplitude level
+k2       linen     p6, 0, p7, p7       ; p5 = pitch
+a1       oscil     k1, cpspch(p5)+k2, p8         ; p6 = modulation depth
+                                       ; p7 = modulation decay
+anoise   rand      20000               ; p8 = waveshape
+aeg      linen     anoise, 0, p10, p10 ; p9 = noise filter cutoff frequency
+a2       butterhp  aeg, p9             ; p10 = noise amplitude decay 
+                                       
+         out       a1*0.9+a2*0.1
+         endin

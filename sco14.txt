@@ -1,0 +1,21 @@
+;claves
+f 1 0 4096 10 1 
+f 2 0 4096 10 1 0 .11
+f 3 0 4096 10 1 0 .11 0 .04
+
+
+; p1 = instrument [14]
+; p2 = start (s)
+; p3 = amplitude decay (s) [0.15 - 0.25]
+; p4 = amplitude level [0 - 20000]
+; p5 = frequency (Hz) [1500 - 3500]
+; p6 = waveshape [1, 2, 3]
+
+;              amplitude --
+; inst  start  decay  level  frequency  waveshape
+i  14    0      0.2    20000  1500       1  
+i  14    1      0.2    20000  2500       1  
+i  14    2      0.2    20000  3500       1  
+
+e
+

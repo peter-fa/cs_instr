@@ -1,0 +1,12 @@
+  sr = 44100
+  kr = 4410
+  ksmps = 10
+  nchnls = 1
+
+; cymbal
+         instr 15                      ; p3 = amplitude decay
+anoise   rand      20000               ; p4 = filter cutoff frequency
+aeg      linen     anoise, 0, p3, p3
+a1       butterhp  aeg, p4
+         out       a1                  
+         endin

@@ -1,0 +1,15 @@
+;cymbal
+
+; p1 = instrument [15]
+; p2 = start (s)
+; p3 = amplitude decay (s) [0.2 (closed hh), 1 (open hh), >= 2.5 (cymbal)]
+; p4 = filter cutoff frequency (Hz) [>= 2000]
+
+;              amplitude  filter 
+; inst  start  decay      cutoff
+i  15    0      0.2        2000
+i  15    1      1          2000
+i  15    3      3          2000
+
+e
+

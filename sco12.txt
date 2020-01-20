@@ -1,0 +1,30 @@
+;snare drum
+f 1 0 4096 10 1 
+f 2 0 4096 10 1 0 .11
+f 3 0 4096 10 1 0 .11 0 .04
+
+
+; p1 = instrument [12]
+; p2 = start (s)
+; p3 = amplitude decay (s) [0.25 - 0.4]
+; p4 = amplitude level [0 - 20000]
+; p5 = frequency (Hz) [160, 100 - 200]
+; p6 = modulation depth (Hz) [3 - 6]
+; p7 = modulation decay (s) [0.1 - 0.2]
+; p8 = waveshape [1, 2, 3]
+; p9 = noise filter cutoff frequency (Hz) [0 - 200]
+; p10 = noise amplitude decay (s) [0.1 - 0.6] 
+; p11 = snappy [0 - 0.5]
+
+
+;              amplitude --             modulation -             noise -------
+; inst  start  decay  level  frequency  depth  decay  waveshape  cutoff  decay  snappy 
+i  12    0      0.3    20000  160        4      0.2    1          160     0.3    0
+i  12    1      0.3    20000  160        4      0.2    1          160     0.3    0.1
+i  12    2      0.3    20000  160        4      0.2    1          160     0.3    0.2
+i  12    3      0.3    20000  160        4      0.2    1          160     0.3    0.3
+i  12    4      0.3    20000  160        4      0.2    1          160     0.3    0.4
+i  12    5      0.3    20000  160        4      0.2    1          160     0.3    0.5
+
+e
+

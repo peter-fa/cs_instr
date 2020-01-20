@@ -1,0 +1,17 @@
+  sr = 44100
+  kr = 4410
+  ksmps = 10
+  nchnls = 1
+
+; snare drum
+         instr 12                      ; p3 = amplitude decay
+k1       linen     p4, 0, p3, p3       ; p4 = amplitude level
+k2       linen     p6, 0, p7, p7       ; p5 = frequency
+a1       oscil     k1, p5+k2, p8       ; p6 = modulation depth
+                                       ; p7 = modulation decay
+anoise   rand      20000               ; p8 = waveshape
+aeg      linen     anoise, 0, p10, p10 ; p9 = noise filter cutoff frequency
+a2       butterhp  aeg, p9             ; p10 = noise amplitude decay 
+                                       ; p11 = snappy 
+         out       a1*(1-p11)+a2*p11
+         endin

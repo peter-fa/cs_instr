@@ -1,0 +1,12 @@
+  sr = 44100
+  kr = 4410
+  ksmps = 10
+  nchnls = 1
+
+; kick drum
+         instr 11                      ; p3 = amplitude decay
+k1       linen     p4, 0, p3, p3       ; p4 = amplitude level
+k2       linen     p6, 0, p7, p7       ; p5 = frequency
+a1       oscil     k1, p5+k2, p8       ; p6 = modulation depth
+         out       a1                  ; p7 = modulation decay
+         endin                         ; p8 = waveshape

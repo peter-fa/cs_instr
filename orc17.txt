@@ -1,0 +1,12 @@
+  sr = 44100
+  kr = 4410
+  ksmps = 10
+  nchnls = 1
+
+; cowbell fm
+         instr 17                      ; p3 = amplitude decay
+k1       linen     p4, 0, p3, p3       ; p4 = amplitude level
+k2       linseg    p8, p3, 1           ; p5 = frequency
+a1       foscil    k1, p5, p6, p7, k2, 1         ; p6 = c, p7 = m
+         out       a1                  ; p8 = index
+         endin
